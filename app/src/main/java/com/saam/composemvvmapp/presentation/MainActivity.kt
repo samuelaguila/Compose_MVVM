@@ -1,8 +1,11 @@
-package com.saam.composemvvmapp
+package com.saam.composemvvmapp.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.saam.composemvvmapp.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
 
