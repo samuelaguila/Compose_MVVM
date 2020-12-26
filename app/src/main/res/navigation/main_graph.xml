@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/recipeFragment">
+    app:startDestination="@id/recipeListFragment">
 
     <fragment
         android:id="@+id/recipeFragment"
         android:name="com.saam.composemvvmapp.presentation.ui.recipe.RecipeFragment"
         android:label="fragment_recipe"
-        tools:layout="@layout/fragment_recipe" >
-        <action
-            android:id="@+id/action_recipeFragment_to_recipeListFragment"
-            app:destination="@id/recipeListFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_recipe" />
     <fragment
         android:id="@+id/recipeListFragment"
         android:name="com.saam.composemvvmapp.presentation.ui.recipe_list.RecipeListFragment"
         android:label="fragment_recipe_list"
-        tools:layout="@layout/fragment_recipe_list" />
+        tools:layout="@layout/fragment_recipe_list" >
+        <action
+            android:id="@+id/action_recipeListFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
 </navigation>
